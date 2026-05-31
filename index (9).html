@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二新卒エージェントneo｜20代の転職を内定までフルサポート</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+<!-- ============================================================ -->
+<!-- ★サイトごとに変えるのはこの1行だけ★                          -->
+<!-- 公開するサイトに対応するアフィリエイトリンクを下に貼り替える -->
+<script>
+  window.AFFILIATE_URL = "https://px.a8.net/svt/ejp?a8mat=3THEYQ+4UH5X6+3Y6M+67JUA";
+  // 例) サイトA用:  "https://px.a8.net/svt/ejp?a8mat=XXXXA..."
+  // 例) サイトB用:  "https://px.a8.net/svt/ejp?a8mat=XXXXB..."
+  // 新しいタブで開きたくない場合は下を false に
+  window.AFFILIATE_NEW_TAB = true;
+</script>
+<!-- ============================================================ -->
+<style>
+:root{
+  --orange:#ff6a00;--orange-deep:#e85400;--orange-pale:#fff3e9;--yellow:#ffb300;
+  --ink:#1a2230;--gray:#5a6577;--gray-light:#8a94a3;--line:#e9edf2;
+  --bg:#ffffff;--bg-soft:#fafbfc;--green:#10a35a;--red:#e8392b;
+  --shadow:0 14px 44px rgba(26,34,48,.10);--shadow-soft:0 4px 18px rgba(26,34,48,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;overflow-x:hidden;font-weight:500;letter-spacing:.01em}
+.disp{font-weight:900;letter-spacing:.02em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.pr-tag{display:inline-block;font-size:.62rem;font-weight:600;color:var(--gray-light);letter-spacing:.08em;border:1px solid var(--line);border-radius:4px;padding:1px 7px;line-height:1.4;vertical-align:middle}
+
+/* === CTA button (anchored, contrast color, action verb, friction-reducer) === */
+.btn-main{display:inline-flex;align-items:center;gap:10px;justify-content:center;background:linear-gradient(135deg,var(--orange) 0%,var(--orange-deep) 100%);color:#fff;font-weight:900;font-size:1.18rem;padding:19px 48px;border-radius:14px;text-decoration:none;box-shadow:0 10px 30px rgba(255,106,0,.34);transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s;position:relative;overflow:hidden;animation:breathe 2.6s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+.btn-main::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.4) 50%,transparent 70%);background-size:200% 100%;animation:shine 3s infinite}
+@keyframes shine{0%{background-position:200% 0}100%{background-position:-120% 0}}
+.btn-main:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 18px 50px rgba(255,106,0,.45)}
+.btn-main .arr{font-size:1.3rem}
+.btn-main small{display:block;font-size:.7rem;font-weight:600;opacity:.95}
+.micro{font-size:.8rem;color:var(--gray);font-weight:700;margin-top:9px;display:flex;align-items:center;gap:6px;justify-content:center}
+.micro .ok{color:var(--green);font-weight:900}
+
+/* float */
+.float-cta{position:fixed;bottom:0;left:0;right:0;z-index:100;background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.96) 42%);padding:10px 16px 14px;display:flex;flex-direction:column;align-items:center;gap:5px;pointer-events:none}
+.float-cta a{pointer-events:auto}
+.float-live{pointer-events:none;font-size:.74rem;font-weight:800;color:var(--orange-deep);background:#fff;padding:4px 14px;border-radius:30px;box-shadow:var(--shadow-soft);display:flex;align-items:center;gap:6px}
+.float-cta .btn-main{padding:16px 40px;font-size:1.08rem}
+.pulse{width:8px;height:8px;border-radius:50%;background:var(--red);animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(232,57,43,.55)}70%{box-shadow:0 0 0 9px rgba(232,57,43,0)}100%{box-shadow:0 0 0 0 rgba(232,57,43,0)}}
+
+/* live ticker (social proof, top) */
+.livebar{position:sticky;top:0;z-index:60;background:var(--ink);color:#fff;padding:9px 0;font-size:.84rem;font-weight:700;text-align:center}
+.livebar .pulse{display:inline-block;vertical-align:middle;margin-right:7px}
+.livebar b{color:var(--yellow)}
+
+/* header */
+header{position:sticky;top:38px;z-index:50;padding:13px 0;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.26rem}
+.logo .mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--orange),var(--yellow));display:grid;place-items:center;color:#fff;font-size:1.05rem;box-shadow:var(--shadow-soft)}
+.logo small{font-size:.6rem;color:var(--gray);font-weight:600;display:block}
+.head-in .pr-tag{margin-left:auto}
+.head-cta{display:inline-flex;align-items:center;gap:6px;background:var(--orange);color:#fff;font-weight:800;font-size:.82rem;padding:9px 18px;border-radius:10px;text-decoration:none}
+@media(max-width:600px){.head-cta{display:none}}
+
+/* hero */
+.hero{position:relative;background:var(--bg);padding:50px 0 60px;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-180px;right:-160px;width:560px;height:560px;background:radial-gradient(circle,rgba(255,179,0,.14) 0%,transparent 65%);z-index:0}
+.hero::after{content:"";position:absolute;bottom:-160px;left:-160px;width:480px;height:480px;background:radial-gradient(circle,rgba(255,106,0,.08) 0%,transparent 65%);z-index:0}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.12fr .88fr;gap:42px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:8px;background:var(--orange-pale);border:1px solid rgba(255,106,0,.3);color:var(--orange-deep);font-weight:800;font-size:.82rem;padding:7px 16px;border-radius:30px;margin-bottom:18px}
+h1.hero-title{font-size:clamp(1.9rem,5.6vw,3.5rem);font-weight:900;line-height:1.28;margin-bottom:18px;letter-spacing:.01em;color:var(--ink)}
+h1.hero-title .ln{display:block}
+@media(max-width:380px){h1.hero-title{font-size:1.72rem}}
+h1.hero-title .hl{position:relative;white-space:nowrap}
+h1.hero-title .hl::after{content:"";position:absolute;left:-1%;bottom:6px;width:102%;height:28%;background:var(--yellow);z-index:-1;border-radius:3px;opacity:.55}
+h1.hero-title .big{display:block;font-size:1.16em;color:var(--orange-deep)}
+.hero-sub{font-size:1.06rem;color:var(--gray);font-weight:500;margin-bottom:16px}
+.trust-row{display:flex;align-items:center;gap:14px;margin-bottom:8px;flex-wrap:wrap}
+.trust-row .stars{color:var(--yellow);font-size:1rem;font-weight:900}
+.trust-row .stars b{color:var(--ink);margin-left:4px}
+.trust-row .gsrc{display:inline-flex;align-items:center;gap:6px;font-size:.84rem;color:var(--gray);font-weight:700}
+.trust-row .gsrc small{font-size:.74rem;color:var(--gray-light);font-weight:600}
+.trust-row .gicon{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#fff;border:1px solid var(--line);font-family:Arial,sans-serif;font-weight:900;font-size:.82rem;background:conic-gradient(from -45deg,#ea4335 0 25%,#fbbc05 0 50%,#34a853 0 75%,#4285f4 0);color:#fff;text-shadow:0 0 2px rgba(0,0,0,.3)}
+.users-line{font-size:.84rem;color:var(--gray);font-weight:700;margin-bottom:18px}
+.trust-row .users{font-size:.84rem;color:var(--gray);font-weight:700}
+.hero-points{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:22px}
+.hero-points li{display:flex;gap:10px;align-items:flex-start;font-weight:700;font-size:.98rem;color:var(--ink);line-height:1.5}
+.hero-points li::before{content:"✓";display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;font-size:.8rem;font-weight:900;flex-shrink:0;margin-top:1px}
+.hero-points .np{white-space:nowrap}
+.hero-points li b{color:var(--orange-deep);margin-left:4px}
+.hero-cta-group{display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+
+/* hero live card */
+.hero-card{position:relative;background:#fff;color:var(--ink);border-radius:18px;padding:26px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.hero-card .ribbon{position:absolute;top:-13px;right:20px;background:var(--green);color:#fff;padding:7px 18px;border-radius:8px;font-weight:900;font-size:.82rem;box-shadow:0 6px 18px rgba(16,163,90,.3)}
+.live-head{display:flex;align-items:center;gap:8px;font-weight:900;font-size:1rem;margin-bottom:4px;color:var(--ink)}
+.live-head .pulse{margin:0}
+.live-month{font-size:.8rem;color:var(--gray);font-weight:700;margin-bottom:14px}
+.counter{font-size:3.5rem;font-weight:900;color:var(--orange);line-height:1;display:flex;align-items:baseline;gap:4px}
+.counter small{font-size:1.3rem;color:var(--ink)}
+.counter-lbl{font-weight:700;margin-bottom:16px;font-size:.88rem;color:var(--gray)}
+.slot-row{background:var(--bg-soft);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;font-size:.85rem;font-weight:700}
+.slot-row .left{display:flex;flex-direction:column}
+.slot-row .left small{font-size:.7rem;color:var(--gray);font-weight:600}
+.slot-row .tag{font-size:.72rem;font-weight:900;padding:3px 10px;border-radius:30px}
+.tag-few{background:#ffe9e6;color:var(--red)}
+.tag-soon{background:#fff3cc;color:#a07800}
+.gauge{height:7px;border-radius:6px;background:var(--line);margin-top:12px;overflow:hidden}
+.gauge .fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--orange),var(--red));width:88%}
+.gauge-lbl{font-size:.72rem;color:var(--red);font-weight:800;margin-top:5px;text-align:right}
+
+/* section base */
+section.block{padding:72px 0}
+.eyebrow{display:inline-block;color:var(--orange-deep);font-weight:900;font-size:.88rem;letter-spacing:.12em;margin-bottom:10px}
+.sec-title{font-size:clamp(1.55rem,4vw,2.5rem);font-weight:900;line-height:1.42;margin-bottom:14px;color:var(--ink)}
+.sec-title .ln{display:block}
+.sec-lead{color:var(--gray);font-weight:500;max-width:640px;margin-bottom:42px}
+.center{text-align:center}
+.center .sec-lead{margin-left:auto;margin-right:auto}
+
+/* inline CTA band (repeat CTA) */
+.cta-inline{text-align:center;padding:8px 0 0}
+.cta-inline .btn-main{font-size:1.16rem}
+
+/* empathy / problem-agitation */
+.empathy{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.empathy .checklist{max-width:620px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.empathy .ci{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;display:flex;gap:12px;align-items:center;font-weight:700;box-shadow:var(--shadow-soft)}
+.empathy .ci .bx{flex-shrink:0;width:24px;height:24px;border-radius:6px;border:2px solid var(--orange);color:var(--orange);font-weight:900;display:grid;place-items:center;font-size:.85rem}
+.empathy .resolve{text-align:center;margin-top:30px;font-weight:900;font-size:1.2rem}
+.empathy .resolve em{color:var(--orange-deep);font-style:normal}
+
+/* fear (white base, red accent) */
+.fear{background:#fff;color:var(--ink);position:relative;overflow:hidden;border-top:3px solid var(--red);border-bottom:1px solid var(--line)}
+.fear::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 0%,rgba(232,57,43,.06),transparent 55%)}
+.fear .wrap{position:relative;z-index:2}
+.fear .eyebrow{color:var(--red)}
+.fear .sec-title{color:var(--ink)}
+.fear-lead{color:var(--gray);font-weight:500;max-width:660px;margin:0 auto 40px;text-align:center}
+.fear-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.fcard{background:var(--bg-soft);border:1px solid var(--line);border-top:3px solid var(--red);border-radius:14px;padding:26px 22px;transition:transform .3s,box-shadow .3s}
+.fcard:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.fcard .fico{font-size:2rem;margin-bottom:10px}
+.fcard h3{font-size:1.05rem;font-weight:900;margin-bottom:8px;color:var(--ink)}
+.fcard p{font-size:.9rem;color:var(--gray);font-weight:400}
+.fcard .stat{display:block;margin-top:12px;font-weight:900;color:var(--red);font-size:.92rem}
+.fear-clock{text-align:center;margin-top:44px;padding:28px;background:#fff;border:2px solid var(--red);border-radius:14px;max-width:720px;margin-left:auto;margin-right:auto;box-shadow:var(--shadow-soft)}
+.fear-clock .big{font-weight:900;font-size:1.4rem;line-height:1.5;color:var(--ink)}
+.fear-clock .big em{color:var(--red);font-style:normal}
+.fear-clock p{color:var(--gray);font-weight:500;margin-top:8px;font-size:.92rem}
+
+/* white jobs */
+.jobs{background:#fff}
+.job-note{display:inline-flex;gap:8px;align-items:center;background:#e7f7ee;color:var(--green);font-weight:800;font-size:.85rem;padding:8px 18px;border-radius:40px;margin-bottom:34px}
+.job-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.job{background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-soft);border:1px solid var(--line);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;position:relative}
+.job:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.job .hot{position:absolute;top:14px;right:14px;background:var(--red);color:#fff;font-size:.66rem;font-weight:900;padding:3px 9px;border-radius:20px;z-index:2}
+.job-top{padding:20px 22px 0;display:flex;justify-content:flex-start;align-items:flex-start;gap:8px}
+.job-cat{font-size:.74rem;font-weight:900;color:#fff;background:var(--orange);padding:4px 12px;border-radius:8px}
+.job:nth-child(2) .job-cat{background:var(--green)}
+.job:nth-child(3) .job-cat{background:#2f6fd0}
+.job:nth-child(4) .job-cat{background:#7c4bd0}
+.job h3{padding:12px 22px 4px;font-size:1.15rem;font-weight:900;line-height:1.4}
+.job .salary{padding:0 22px;font-weight:900;color:var(--orange-deep);font-size:1.04rem}
+.job-story{font-size:.9rem;color:var(--ink);font-weight:600;padding:14px 22px 0;line-height:1.7}
+.job-story .ba{display:flex;flex-direction:column;gap:6px;margin-bottom:4px}
+.job-story .row{display:flex;gap:10px;align-items:flex-start}
+.job-story .row .lab{flex-shrink:0;font-size:.66rem;font-weight:900;color:#fff;padding:3px 8px;border-radius:5px;margin-top:3px}
+.job-story .row.before .lab{background:var(--gray-light)}
+.job-story .row.after .lab{background:var(--green)}
+.job-story .row.before span{color:var(--gray);font-weight:500}
+.job-story .arrow-down{text-align:center;color:var(--orange);font-weight:900;font-size:1rem;margin:-2px 0}
+.job .tags{padding:14px 22px 4px;display:flex;flex-wrap:wrap;gap:7px}
+.job .tags span{font-size:.74rem;font-weight:800;background:var(--orange-pale);color:var(--orange-deep);padding:5px 11px;border-radius:6px}
+.job .white-list{padding:12px 22px 16px;list-style:none;display:flex;flex-direction:column;gap:6px}
+.job .white-list li{font-size:.86rem;font-weight:500;color:var(--gray);display:flex;gap:8px;align-items:flex-start}
+.job .white-list li::before{content:"✓";color:var(--green);font-weight:900;flex-shrink:0}
+.job-foot{margin-top:auto;padding:12px 22px 18px;border-top:1px solid var(--line)}
+.job-foot a{display:flex;justify-content:center;align-items:center;gap:6px;background:var(--orange-pale);color:var(--orange-deep);font-weight:900;font-size:.92rem;padding:11px;border-radius:10px;text-decoration:none;transition:background .2s}
+.job-foot a:hover{background:#ffe6d2}
+.job-foot .left{font-size:.72rem;color:var(--red);font-weight:800;text-align:center;margin-bottom:8px}
+.jobs-cta{text-align:center;margin-top:36px;font-weight:800;font-size:1.05rem}
+.jobs-cta .em{color:var(--orange-deep);font-size:1.26rem;font-weight:900}
+
+/* reasons */
+.reasons{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.reason{display:grid;grid-template-columns:90px 1fr;gap:26px;align-items:center;background:#fff;border-radius:16px;padding:28px 32px;box-shadow:var(--shadow-soft);border:1px solid var(--line);margin-bottom:20px;transition:transform .3s}
+.reason:hover{transform:scale(1.012)}
+.reason .num{font-weight:900;font-size:2.7rem;width:84px;height:84px;border-radius:16px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--orange),#ff9240);box-shadow:var(--shadow-soft)}
+.reason:nth-child(2) .num{background:linear-gradient(135deg,#2f6fd0,#5b95e6)}
+.reason:nth-child(3) .num{background:linear-gradient(135deg,var(--green),#3cc77f)}
+.reason h3{font-size:1.24rem;font-weight:900;margin-bottom:6px}
+.reason p{color:var(--gray);font-weight:400;font-size:.96rem}
+
+/* numbers band */
+.band{background:linear-gradient(135deg,var(--orange) 0%,var(--orange-deep) 100%);color:#fff}
+.band .num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+.band .cell .n{font-size:2.8rem;font-weight:900;line-height:1}
+.band .cell .n small{font-size:1.2rem}
+.band .cell .l{font-size:.85rem;font-weight:700;opacity:.95;margin-top:6px}
+.band .sec-title{color:#fff}.band .center .sec-lead{color:rgba(255,255,255,.9)}
+
+/* flow (commitment / low friction) */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{background:#fff;border-radius:16px;padding:26px 22px;box-shadow:var(--shadow-soft);border:1px solid var(--line);position:relative;text-align:center}
+.step .circ{width:52px;height:52px;border-radius:50%;background:var(--orange-pale);border:3px solid var(--orange);color:var(--orange-deep);font-weight:900;font-size:1.4rem;display:grid;place-items:center;margin:0 auto 14px}
+.step h4{font-size:1.02rem;font-weight:900;margin-bottom:6px}
+.step p{font-size:.84rem;color:var(--gray);font-weight:400}
+.step:not(:last-child)::after{content:"→";position:absolute;right:-14px;top:50%;transform:translateY(-50%);color:var(--orange);font-size:1.4rem;font-weight:900;z-index:3}
+.flow-note{text-align:center;margin-top:26px;font-weight:800;color:var(--ink)}
+.flow-note b{color:var(--orange-deep)}
+
+/* voices */
+.voices{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.voice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.voice{background:#fff;border-radius:16px;padding:26px;box-shadow:var(--shadow-soft);border:1px solid var(--line)}
+.voice .top{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.voice .av{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-size:1.2rem;font-weight:900;color:#fff;background:var(--orange)}
+.voice:nth-child(2) .av{background:var(--green)}.voice:nth-child(3) .av{background:#2f6fd0}.voice:nth-child(4) .av{background:#7c4bd0}
+.voice .who{font-weight:900;font-size:.95rem}
+.voice .who small{display:block;font-size:.72rem;color:var(--gray);font-weight:600}
+.voice .stars{color:var(--yellow);font-size:.9rem;margin-bottom:8px}
+.voice p{font-size:.92rem;color:var(--gray);font-weight:400}
+.voice .tagline{margin-top:10px;font-size:.8rem;font-weight:800;color:var(--green)}
+
+/* faq (objection handling) */
+.faq-item{background:#fff;border-radius:12px;margin-bottom:14px;box-shadow:var(--shadow-soft);border:1px solid var(--line);overflow:hidden}
+.faq-item summary{cursor:pointer;padding:22px 26px;font-weight:800;font-size:1.02rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary .q{display:flex;gap:12px;align-items:flex-start}
+.faq-item summary .q .mk{color:var(--orange);font-weight:900}
+.faq-item summary .ch{color:var(--orange);font-size:1.3rem;transition:transform .3s;flex-shrink:0}
+.faq-item[open] summary .ch{transform:rotate(45deg)}
+.faq-item .ans{padding:0 26px 22px 52px;color:var(--gray);font-weight:400;font-size:.94rem}
+
+/* final cta */
+.final{background:var(--bg);text-align:center;position:relative;overflow:hidden;border-top:1px solid var(--line)}
+.final::before{content:"";position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:640px;height:340px;background:radial-gradient(circle,rgba(255,106,0,.12) 0%,transparent 65%)}
+.final .wrap{position:relative;z-index:2}
+.final .live-final{display:inline-flex;gap:8px;align-items:center;background:var(--orange-pale);border:1px solid rgba(255,106,0,.3);color:var(--orange-deep);padding:8px 20px;border-radius:40px;font-weight:800;font-size:.88rem;margin-bottom:22px}
+.final h2{font-size:clamp(1.8rem,4.5vw,2.7rem);font-weight:900;line-height:1.4;margin-bottom:16px;color:var(--ink)}
+.final p{color:var(--gray);font-weight:500;margin-bottom:30px;max-width:560px;margin-left:auto;margin-right:auto}
+.final .btn-main{font-size:1.32rem;padding:23px 58px}
+.final .reassure{margin-top:20px;font-size:.85rem;color:var(--gray);display:flex;gap:18px;justify-content:center;flex-wrap:wrap;font-weight:700}
+.final .reassure span{display:flex;gap:5px;align-items:center}
+.final .lossframe{margin-top:18px;font-size:.86rem;color:var(--red);font-weight:800}
+
+/* footer */
+footer{background:var(--ink);color:rgba(255,255,255,.6);padding:34px 0 130px;font-size:.82rem;text-align:center}
+footer .fl{font-weight:900;color:#fff;font-size:1.1rem;margin-bottom:8px}
+footer .pr-line{max-width:780px;margin:14px auto 0;font-size:.76rem;opacity:.7}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;gap:28px}
+  .fear-grid{grid-template-columns:1fr}
+  .job-grid{grid-template-columns:1fr}
+  .band .num-grid{grid-template-columns:1fr 1fr;gap:28px 18px}
+  .flow{grid-template-columns:1fr 1fr;gap:30px 18px}
+  .step:not(:last-child)::after{display:none}
+  .voice-grid{grid-template-columns:1fr}
+  .reason{grid-template-columns:60px 1fr;gap:16px;padding:22px}
+  .reason .num{width:56px;height:56px;font-size:1.9rem;border-radius:14px}
+}
+@media(max-width:520px){
+  .btn-main{font-size:1.04rem;padding:17px 32px}
+  .final .btn-main{font-size:1.12rem;padding:19px 38px}
+  .counter{font-size:2.9rem}
+}
+</style>
+</head>
+<body>
+
+<!-- SOCIAL PROOF + SCARCITY ticker -->
+<div class="livebar"><span class="pulse"></span>今月すでに <b id="liveTop">1,856</b> 名が無料相談を予約／本日の残り枠 <b id="slotTop">4</b> 名</div>
+
+<header><div class="wrap head-in">
+  <div class="logo"><div class="mark disp">ne</div>
+    <div class="disp">第二新卒エージェント<span style="color:var(--orange-deep)">neo</span><small>運営：株式会社ネオキャリア</small></div>
+  </div>
+  <span class="pr-tag">PR</span>
+  <a href="#" class="head-cta js-cta">無料相談を予約 →</a>
+</div></header>
+
+<!-- HERO: benefit-led headline + authority + social proof + low-friction CTA -->
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="kicker rv">⭐ 20代の支持率 No.1／第二新卒・既卒・フリーター専門</span>
+    <h1 class="hero-title rv">
+      <span class="ln">経歴に自信がなくても、</span>
+      <span class="ln"><span class="hl">ホワイト企業</span>から</span>
+      <span class="big">内定は取れる。</span>
+    </h1>
+    <p class="hero-sub rv">残業少なめ・離職率の低い"今ある優良求人"を、20代専門のプロが厳選して紹介。書類が通らない、面接が苦手──そんなあなたを、内定までまるごと伴走します。</p>
+    <div class="trust-row rv">
+      <span class="stars">★★★★★<b>4.6</b></span>
+      <span class="gsrc"><span class="gicon">G</span>Googleクチコミ評価<small>（東京本社）</small></span>
+    </div>
+    <div class="users-line rv">累計 8万人 が利用／今月も1,800名以上が相談</div>
+    <ul class="hero-points rv">
+      <li><span class="np">書類選考通過率 <b>94.7%</b></span></li>
+      <li><span class="np">3年以内離職率 <b>8.0%</b></span></li>
+      <li>相談から入社後まで、すべて<b>完全無料</b></li>
+      <li>最短で内定。<b>登録は30秒・スマホで完結</b></li>
+    </ul>
+    <div class="hero-cta-group rv">
+      <a href="#" class="btn-main js-cta"><span>無料で相談してみる<small>30秒で予約・もちろん無料</small></span><span class="arr">→</span></a>
+      <div class="micro"><span class="ok">✓</span>無理な勧誘なし　<span class="ok">✓</span>登録30秒　<span class="ok">✓</span>完全無料</div>
+    </div>
+  </div>
+  <!-- SCARCITY + SOCIAL PROOF card -->
+  <div class="hero-card rv">
+    <span class="ribbon">書類通過率 94.7%</span>
+    <div class="live-head"><span class="pulse"></span>リアルタイム相談状況</div>
+    <div class="live-month" id="monthLbl">2026年5月</div>
+    <div class="counter"><span id="liveCount">1,856</span><small>名 予約</small></div>
+    <div class="counter-lbl">今月、すでにこれだけの20代が動き出しています</div>
+    <div class="slot-row"><div class="left">本日の相談枠<small>オンライン面談</small></div><span class="tag tag-few">残り 4 名</span></div>
+    <div class="slot-row"><div class="left">今週末の枠<small>土日も対応</small></div><span class="tag tag-soon">埋まり間近</span></div>
+    <div class="gauge"><div class="fill"></div></div>
+    <div class="gauge-lbl">本日の予約枠 88% が埋まりました</div>
+  </div>
+</div></section>
+
+<!-- EMPATHY: problem checklist (self-identification, "yes-ladder") -->
+<section class="block empathy">
+  <div class="wrap center">
+    <span class="eyebrow rv">CHECK</span>
+    <h2 class="sec-title rv">一つでも当てはまったら、<br>今が動くタイミングです。</h2>
+    <p class="sec-lead rv">同じ悩みから抜け出した20代が、たくさんいます。</p>
+  </div>
+  <div class="wrap">
+    <div class="checklist">
+      <div class="ci rv"><span class="bx">✓</span>今の会社、入ってみたら「違った」と感じている</div>
+      <div class="ci rv"><span class="bx">✓</span>早期離職・空白期間が不利になりそうで動けない</div>
+      <div class="ci rv"><span class="bx">✓</span>一人で応募してもお祈りばかりで自信をなくしている</div>
+      <div class="ci rv"><span class="bx">✓</span>そもそも自分に何が向いているのか分からない</div>
+      <div class="ci rv"><span class="bx">✓</span>できれば残業少なめ・土日休みの会社で働きたい</div>
+    </div>
+    <div class="resolve rv">そのすべて、<em>プロが無料で</em>一緒に解決します。</div>
+    <div class="cta-inline rv" style="margin-top:24px"><a href="#" class="btn-main js-cta"><span>まずは無料で相談する</span><span class="arr">→</span></a><div class="micro"><span class="ok">✓</span>30秒で予約　<span class="ok">✓</span>勧誘なし</div></div>
+  </div>
+</section>
+
+<!-- FEAR: loss aversion + urgency -->
+<section class="block fear">
+  <div class="wrap center">
+    <span class="eyebrow rv">REALITY CHECK</span>
+    <h2 class="sec-title rv"><span class="ln">そのまま1年経ったあなたを、</span><span class="ln">想像できますか？</span></h2>
+    <p class="fear-lead rv">「いつか動こう」と思っているうちに、状況は静かに悪化します。動かないことのリスクは、あなたが思うよりずっと現実的です。</p>
+  </div>
+  <div class="wrap">
+    <div class="fear-grid">
+      <div class="fcard rv"><div class="fico">📉</div><h3>空白は1ヶ月ごとに不利になる</h3><p>離職・卒業からの空白が延びるほど「なぜ働いていないのか」を厳しく見られ、書類段階で落とされやすくなります。今日より明日のほうが、確実に不利です。</p><span class="stat">▶ 待つほど選考は厳しく</span></div>
+      <div class="fcard rv"><div class="fico">⏳</div><h3>"第二新卒枠"はもうすぐ閉じる</h3><p>未経験OK・ポテンシャル採用は20代だけの特権。年齢を重ねるほど求められるのは「即戦力の実績」になり、選べる求人は一気に減っていきます。</p><span class="stat">▶ この椅子は今だけ空いている</span></div>
+      <div class="fcard rv"><div class="fico">💔</div><h3>自己流は"自信"まで削られる</h3><p>応募→お祈り→落ち込みのループ。落ち続けるほど「自分はダメなのかも」と思い込み、行動するエネルギーそのものが奪われていきます。</p><span class="stat">▶ 一番こわいのは慣れること</span></div>
+    </div>
+    <div class="fear-clock rv">
+      <div class="big">あなたが迷っている今この瞬間も、<br><em>条件の良い求人は、別の誰かに決まっています。</em></div>
+      <p>「動けなかった人」と「動いた人」の差は、半年後にはもう取り返せません。<br>抜け出した人は、みんな"たった一本の無料相談"から始めています。</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHITE JOBS: anchoring + concreteness + scarcity per card -->
+<section class="block jobs">
+  <div class="wrap center">
+    <span class="eyebrow rv">WHITE JOBS</span>
+    <h2 class="sec-title rv">こんな毎日に、<br>変われる求人があります。</h2>
+    <div class="job-note rv">✓ アドバイザーが実際に足を運んで厳選した、未経験OKの正社員求人</div>
+  </div>
+  <div class="wrap">
+    <div class="job-grid">
+      <div class="job rv">
+        <span class="hot">🔥 人気</span>
+        <div class="job-top"><span class="job-cat">IT・事務</span></div>
+        <h3>未経験OK・ITサポート事務</h3>
+        <div class="salary">月給 28万円〜＋賞与年2回（計4ヶ月分）</div>
+        <div class="job-story"><div class="ba">
+          <div class="row before"><span class="lab">今</span><span>毎晩終電。土日も疲れて寝るだけ。何年いても手取りは増えない。</span></div>
+          <div class="arrow-down">↓</div>
+          <div class="row after"><span class="lab">入社後</span><span>年休128日・残業ほぼゼロ。フルリモート可で、平日の夜も土日も丸ごと自分の時間に。</span></div>
+        </div></div>
+        <div class="tags"><span>完全週休2日</span><span>残業月5h以内</span><span>フルリモート可</span><span>フレックス</span></div>
+        <ul class="white-list"><li>研修3ヶ月＋資格取得費は会社が全額負担</li><li>未経験から手に職、PCスキルが一生モノに</li></ul>
+        <div class="job-foot"><div class="left">この求人の紹介枠 残りわずか</div><a href="#" class="js-cta">この求人の話を聞いてみる →</a></div>
+      </div>
+      <div class="job rv">
+        <span class="hot">🔥 人気</span>
+        <div class="job-top"><span class="job-cat">人材・企画</span></div>
+        <h3>反響型ルート営業（ノルマ・残業なし）</h3>
+        <div class="salary">月給 30万円〜＋賞与（年収例 450万円）</div>
+        <div class="job-story"><div class="ba">
+          <div class="row before"><span class="lab">今</span><span>飛び込み・詰められる毎日。日曜の夜が憂うつでたまらない。</span></div>
+          <div class="arrow-down">↓</div>
+          <div class="row after"><span class="lab">入社後</span><span>既存客中心でノルマなし。「ありがとう」と言われる仕事に。家賃半額補助＆週1在宅。</span></div>
+        </div></div>
+        <div class="tags"><span>ノルマなし</span><span>家賃補助50%</span><span>週1在宅</span><span>5連休OK</span></div>
+        <ul class="white-list"><li>年休125日＋有給消化率ほぼ100%</li><li>早期離職・既卒からの入社・活躍実績が多数</li></ul>
+        <div class="job-foot"><div class="left">先月この枠から3名が内定</div><a href="#" class="js-cta">この求人の話を聞いてみる →</a></div>
+      </div>
+      <div class="job rv">
+        <div class="job-top"><span class="job-cat">バックオフィス</span></div>
+        <h3>経理・総務アシスタント（土日祝休み）</h3>
+        <div class="salary">月給 27万円〜＋賞与年2回</div>
+        <div class="job-story"><div class="ba">
+          <div class="row before"><span class="lab">今</span><span>不安定なシフト。来月の収入も、来年の自分も見えない。</span></div>
+          <div class="arrow-down">↓</div>
+          <div class="row after"><span class="lab">入社後</span><span>完全土日祝休みの正社員に。定時退社が基本、産休育休の取得実績も豊富で一生働ける。</span></div>
+        </div></div>
+        <div class="tags"><span>残業ほぼなし</span><span>有給消化100%</span><span>産育休実績多数</span><span>退職金あり</span></div>
+        <ul class="white-list"><li>資格取得支援あり・年間休日127日</li><li>フリーターからの正社員デビューに人気</li></ul>
+        <div class="job-foot"><div class="left">女性からの応募が急増中</div><a href="#" class="js-cta">この求人の話を聞いてみる →</a></div>
+      </div>
+      <div class="job rv">
+        <div class="job-top"><span class="job-cat">メーカー</span></div>
+        <h3>機械オペレーター（年休128日・転勤なし）</h3>
+        <div class="salary">月給 28万円〜＋手当充実（寮費無料）</div>
+        <div class="job-story"><div class="ba">
+          <div class="row before"><span class="lab">今</span><span>「経験者だけ」で何度も落ちた。自分には何もない気がする。</span></div>
+          <div class="arrow-down">↓</div>
+          <div class="row after"><span class="lab">入社後</span><span>社員のほぼ全員が未経験スタート。寮費無料・転勤なしで、地元で着実に貯金もできる。</span></div>
+        </div></div>
+        <div class="tags"><span>寮費無料</span><span>未経験95%</span><span>転勤なし</span><span>各種手当充実</span></div>
+        <ul class="white-list"><li>マニュアル完備で、未経験でも3ヶ月で一人前に</li><li>手当が厚く、同年代より高い手取りも狙える</li></ul>
+        <div class="job-foot"><div class="left">入社祝い金ありの期間限定枠</div><a href="#" class="js-cta">この求人の話を聞いてみる →</a></div>
+      </div>
+    </div>
+    <div class="jobs-cta rv">気になる求人が一つでもあったなら、<span class="em">それは今日動くサイン</span>です。<br>これらは紹介できる求人のごく一部。あなたに合う求人は、相談で見つかります。</div>
+    <div class="cta-inline rv" style="margin-top:24px"><a href="#" class="btn-main js-cta"><span>自分に合う求人を無料で見てもらう</span><span class="arr">→</span></a></div>
+  </div>
+</section>
+
+<!-- REASONS: authority + risk reversal -->
+<section class="block reasons">
+  <div class="wrap center"><span class="eyebrow rv">WHY neo</span><h2 class="sec-title rv">選ばれる3つの理由</h2></div>
+  <div class="wrap">
+    <div class="reason rv"><div class="num">1</div><div><h3>経歴に自信がなくても大丈夫</h3><p>第二新卒・既卒・フリーター・社会人経験ゼロ──そんな20代に特化。1人あたり約8時間をかける丁寧なカウンセリングで、あなたの「強み」を一緒に言葉にします。書類選考通過率は94.7%。</p></div></div>
+    <div class="reason rv"><div class="num">2</div><div><h3>アドバイザーが実際に見た求人だけ</h3><p>担当者が自ら足を運んで厳選した、未経験OKの正社員求人をご紹介。だから入社後のミスマッチが少なく、3年以内の離職率は8.0%と低水準。残業少なめ・休日多めのホワイト求人を厳選しています。</p></div></div>
+    <div class="reason rv"><div class="num">3</div><div><h3>相談から入社後まで、ぜんぶ無料</h3><p>履歴書・職務経歴書の添削、面接対策、企業との日程調整、入社準備、内定後の研修まで一貫サポート。費用負担も、無理に転職させられることも一切ありません。やめたくなったらいつでもOK。</p></div></div>
+  </div>
+</section>
+
+<!-- NUMBERS: authority / bandwagon -->
+<section class="block band">
+  <div class="wrap center">
+    <h2 class="sec-title rv">数字で見るneo</h2>
+    <p class="sec-lead rv">これまで多くの20代の「はじめの一歩」を支えてきました。</p>
+    <div class="num-grid">
+      <div class="cell rv"><div class="n">8<small>万人</small></div><div class="l">18〜25歳の支援実績</div></div>
+      <div class="cell rv"><div class="n">94.7<small>%</small></div><div class="l">書類選考通過率</div></div>
+      <div class="cell rv"><div class="n">2,000<small>社+</small></div><div class="l">紹介企業数</div></div>
+      <div class="cell rv"><div class="n">8.0<small>%</small></div><div class="l">3年以内離職率（低水準）</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW: low friction / commitment -->
+<section class="block">
+  <div class="wrap center"><span class="eyebrow rv">EASY STEPS</span><h2 class="sec-title rv">内定までの流れ</h2><p class="sec-lead rv">あなたがやることは、最初の30秒だけ。あとはプロにおまかせ。</p></div>
+  <div class="wrap"><div class="flow">
+    <div class="step rv"><div class="circ">1</div><h4>無料予約</h4><p>フォーム入力は約30秒。スマホで完結します。</p></div>
+    <div class="step rv"><div class="circ">2</div><h4>キャリア相談</h4><p>専任アドバイザーが希望や強みを丁寧にヒアリング。</p></div>
+    <div class="step rv"><div class="circ">3</div><h4>求人紹介・対策</h4><p>厳選求人の紹介、書類添削、面接対策をサポート。</p></div>
+    <div class="step rv"><div class="circ">4</div><h4>内定・入社</h4><p>日程調整から入社準備、入社後まで一貫フォロー。</p></div>
+  </div>
+  <div class="flow-note rv">面倒な作業はぜんぶプロが代行。<b>あなたは「話すだけ」</b>でOKです。</div>
+  </div>
+</section>
+
+<!-- VOICES: social proof + similarity -->
+<section class="block voices">
+  <div class="wrap center"><span class="eyebrow rv">REAL VOICES</span><h2 class="sec-title rv">あなたと同じ状況から、<br>抜け出した人たち</h2></div>
+  <div class="wrap"><div class="voice-grid">
+    <div class="voice rv"><div class="top"><div class="av">A</div><div class="who">Aさん<small>新卒2か月で離職／23歳</small></div></div><div class="stars">★★★★★</div><p>1人での転職活動が不安でしたが、最後まで親身に支えていただきました。結果的にいくつか内定をいただき、無事に転職活動を終えられました。</p><div class="tagline">→ 早期離職から正社員へ</div></div>
+    <div class="voice rv"><div class="top"><div class="av">B</div><div class="who">Bさん<small>既卒／24歳</small></div></div><div class="stars">★★★★★</div><p>経歴に自信がなく落ち込んでいましたが、メンタル面まで支えてもらえました。手厚いサポートのおかげで前向きに動けました。</p><div class="tagline">→ 既卒から内定獲得</div></div>
+    <div class="voice rv"><div class="top"><div class="av">C</div><div class="who">Cさん<small>フリーター→正社員／25歳</small></div></div><div class="stars">★★★★★</div><p>未経験から正社員を目指せる求人を紹介してもらえました。スピード感があり、思ったより早く内定までたどり着けました。</p><div class="tagline">→ 約3週間で内定</div></div>
+    <div class="voice rv"><div class="top"><div class="av">D</div><div class="who">Dさん<small>早期離職／22歳</small></div></div><div class="stars">★★★★★</div><p>すでに仕事を辞めていて焦っていましたが、すぐにでも動きたい自分にぴったりでした。書類の書き方から教えてもらえて助かりました。</p><div class="tagline">→ 離職中から再就職</div></div>
+  </div>
+  <div class="cta-inline rv" style="margin-top:30px"><a href="#" class="btn-main js-cta"><span>自分も相談してみる</span><span class="arr">→</span></a></div>
+  </div>
+</section>
+
+<!-- FAQ: objection handling -->
+<section class="block">
+  <div class="wrap" style="max-width:780px">
+    <div class="center"><span class="eyebrow rv">FAQ</span><h2 class="sec-title rv">不安なこと、先に解消します</h2></div>
+    <details class="faq-item rv"><summary><span class="q"><span class="mk">Q</span>本当に無料で使えますか？</span><span class="ch">＋</span></summary><div class="ans">はい。相談・求人紹介・面接対策・入社後フォローまで、求職者の費用負担は一切ありません。違約金などもかかりません。</div></details>
+    <details class="faq-item rv"><summary><span class="q"><span class="mk">Q</span>しつこく転職を勧められませんか？</span><span class="ch">＋</span></summary><div class="ans">いいえ。無理に転職を勧めることはありません。まずは状況整理や求人を見るだけの相談も歓迎ですし、合わないと感じたらいつでもやめられます。</div></details>
+    <details class="faq-item rv"><summary><span class="q"><span class="mk">Q</span>社会人経験がなくても利用できますか？</span><span class="ch">＋</span></summary><div class="ans">大丈夫です。既卒・フリーター・職務経験なしの方の支援実績が10,000人を超えています。学歴も不問で、未経験OKの正社員求人を多数ご紹介しています。</div></details>
+    <details class="faq-item rv"><summary><span class="q"><span class="mk">Q</span>早期離職していますが不利になりませんか？</span><span class="ch">＋</span></summary><div class="ans">第二新卒に特化しているからこそ、早期離職の背景を前向きに伝える方法を一緒に考えます。同じ状況から内定を得た方が多数いらっしゃいます。だからこそ、早めの相談が選択肢を広げます。</div></details>
+    <details class="faq-item rv"><summary><span class="q"><span class="mk">Q</span>相談はどのくらい時間がかかりますか？</span><span class="ch">＋</span></summary><div class="ans">予約フォームの入力は約30秒。スマホで完結します。面談はオンラインで、土日も対応しています。</div></details>
+  </div>
+</section>
+
+<!-- FINAL CTA: loss frame + reassurance -->
+<section class="block final" id="cta">
+  <div class="wrap">
+    <div class="live-final"><span class="pulse"></span>今月の予約 <span id="liveFinal">1,856</span> 名／本日残り <span id="slotFinal">4</span> 枠</div>
+    <h2>動き出すなら、<br>選択肢が多い「今日」です。</h2>
+    <p>迷っている時間にも、ホワイトな求人は他の誰かに決まっていきます。30秒の相談予約が、半年後のあなたを大きく変えます。もちろん無料、無理な勧誘もありません。</p>
+    <a href="#" class="btn-main js-cta"><span>無料で相談を予約する<small>30秒・スマホで完結</small></span><span class="arr">→</span></a>
+    <div class="reassure"><span>✓ 完全無料</span><span>✓ 学歴不問</span><span>✓ 無理な勧誘なし</span><span>✓ 20代専門</span></div>
+    <div class="lossframe">※本日の相談枠は残り4名。埋まり次第、次の空きは数日後になります。</div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="fl">第二新卒エージェントneo</div>
+  <div>運営：株式会社ネオキャリア</div>
+  <div class="pr-line">本ページはプロモーション（PR）を目的とした広告です。</div>
+</div></footer>
+
+<div class="float-cta">
+  <div class="float-live"><span class="pulse"></span>本日の相談枠 残り <span id="slotFloat">4</span> 名</div>
+  <a href="#" class="btn-main js-cta"><span>30秒で無料相談を予約</span><span class="arr">→</span></a>
+</div>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4*0.06)+'s';io.observe(el)});
+
+const now=new Date();
+document.getElementById('monthLbl').textContent=now.getFullYear()+'年'+(now.getMonth()+1)+'月';
+
+let count=1856,slots=4;
+const liveEls=['liveTop','liveCount','liveFinal'],slotEls=['slotTop','slotFinal','slotFloat'];
+function render(){liveEls.forEach(i=>{const e=document.getElementById(i);if(e)e.textContent=count.toLocaleString()});slotEls.forEach(i=>{const e=document.getElementById(i);if(e)e.textContent=slots})}
+render();
+setInterval(()=>{if(Math.random()<0.55){count++;if(slots>1&&Math.random()<0.15)slots--;render();const c=document.getElementById('liveCount');if(c){c.style.transition='transform .3s';c.style.transform='scale(1.18)';setTimeout(()=>c.style.transform='scale(1)',300);}}},4000);
+
+// === 全CTAボタンにアフィリエイトリンクを一括設定 ===
+(function(){
+  var url=(window.AFFILIATE_URL||"").trim();
+  var newTab=(window.AFFILIATE_NEW_TAB!==false);
+  if(!url){console.warn("AFFILIATE_URL が未設定です。head内の window.AFFILIATE_URL を設定してください。");return;}
+  document.querySelectorAll('a.js-cta').forEach(function(a){
+    a.setAttribute('href',url);
+    if(newTab){a.setAttribute('target','_blank');a.setAttribute('rel','sponsored nofollow noopener');}
+    else{a.setAttribute('rel','sponsored nofollow');}
+  });
+})();
+</script>
+</body>
+</html>
